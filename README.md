@@ -1,3 +1,6 @@
+Mateusz Hann & Oskar Kłos
+203308         203708
+
 # Pandas exercises
 [Task 1](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%201.md)
 [Task 2](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%202.md)
