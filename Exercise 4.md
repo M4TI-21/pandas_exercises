@@ -107,6 +107,19 @@ dirty_iris
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -843,19 +856,6 @@ data = load_breast_cancer()
 df = pd.DataFrame(data.data, columns=data.feature_names)
 ```
 
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\zlib1.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\abseil_dll.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\utf8_validity.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\re2.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\libprotobuf.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\highs.dll...
-    load c:\Users\DELL\AppData\Local\Programs\Python\Python313\Lib\site-packages\ortools\.libs\ortools.dll...
-    (CVXPY) Apr 14 03:36:40 PM: Encountered unexpected exception importing solver GLOP:
-    RuntimeError('Unrecognized new version of ortools (9.12.4544). Expected < 9.12.0. Please open a feature request on cvxpy to enable support for this version.')
-    (CVXPY) Apr 14 03:36:40 PM: Encountered unexpected exception importing solver PDLP:
-    RuntimeError('Unrecognized new version of ortools (9.12.4544). Expected < 9.12.0. Please open a feature request on cvxpy to enable support for this version.')
-    
-
 We choose a variable to discretize and the binary target.
 
 
@@ -880,6 +880,424 @@ optb.fit(x, y)
 ```
 
 
+
+
+<style>#sk-container-id-21 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-21 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-21 pre {
+  padding: 0;
+}
+
+#sk-container-id-21 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-21 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-21 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-21 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-21 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-21 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-21 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-21 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-21 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-21 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-21 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-21 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-21 label.sk-toggleable__label {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+#sk-container-id-21 label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
+}
+
+#sk-container-id-21 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-21 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-21 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-21 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-21 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-21 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-21 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-21 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-21 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-21 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-21 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-21 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-21 div.sk-label label.sk-toggleable__label,
+#sk-container-id-21 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-21 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-21 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-21 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-21 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-21 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-21 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-21 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-21 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  text-align: center;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-21 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-21 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-21 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-21 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</style><div id="sk-container-id-21" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>OptimalBinning(name=&#x27;mean radius&#x27;)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator  sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-21" type="checkbox" checked><label for="sk-estimator-id-21" class="sk-toggleable__label  sk-toggleable__label-arrow"><div><div>OptimalBinning</div></div><div><span class="sk-estimator-doc-link ">i<span>Not fitted</span></span></div></label><div class="sk-toggleable__content "><pre>OptimalBinning(name=&#x27;mean radius&#x27;)</pre></div> </div></div></div></div>
 
 
 
@@ -941,6 +1359,19 @@ binning_table.build()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1136,6 +1567,7 @@ Work with the 'carseats' dataset, find the best way to perform full diagnostic (
 ```python
 # your code goes here
 msno.matrix(carseats)
+
 ```
 
 
@@ -1153,5 +1585,280 @@ msno.matrix(carseats)
 
 
 ```python
-
+carseats.isna().sum()
+# here we can see how many missing values we have in each variable (the sum)
 ```
+
+
+
+
+    Sales             0
+    CompPrice         0
+    Income           20
+    Advertising       0
+    Population        0
+    Price             0
+    ShelveLoc         0
+    Age               0
+    Education         0
+    Urban            10
+    US                0
+    Income_Binned    20
+    dtype: int64
+
+
+
+
+```python
+msno.bar(carseats)
+# here we can see bars for better visualization, we think it is very helpful because we can clearly see
+# after just one quick look the statistics of missingness
+```
+
+
+
+
+    <Axes: >
+
+
+
+
+    
+![png](Exercise%204_files/Exercise%204_94_1.png)
+    
+
+
+
+```python
+msno.matrix(carseats)
+# with matrix, thanks to the bar on right, we can see how the missing data is distributed 
+# and maybe some potential correlations between variables
+```
+
+
+
+
+    <Axes: >
+
+
+
+
+    
+![png](Exercise%204_files/Exercise%204_95_1.png)
+    
+
+
+
+```python
+msno.heatmap(carseats)
+# this is the best for correalation statistics as we can clearly see the difference in colours that works both ways from -1 to 1.
+```
+
+
+
+
+    <Axes: >
+
+
+
+
+    
+![png](Exercise%204_files/Exercise%204_96_1.png)
+    
+
+
+
+```python
+msno.dendrogram(carseats)
+# this is also good for correlation, in addition it provides the dissimilarity
+```
+
+
+
+
+    <Axes: >
+
+
+
+
+    
+![png](Exercise%204_files/Exercise%204_97_1.png)
+    
+
+
+
+```python
+carseats.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sales</th>
+      <th>CompPrice</th>
+      <th>Income</th>
+      <th>Advertising</th>
+      <th>Population</th>
+      <th>Price</th>
+      <th>ShelveLoc</th>
+      <th>Age</th>
+      <th>Education</th>
+      <th>Urban</th>
+      <th>US</th>
+      <th>Income_Binned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9.50</td>
+      <td>138</td>
+      <td>73.0</td>
+      <td>11</td>
+      <td>276</td>
+      <td>120</td>
+      <td>Bad</td>
+      <td>42</td>
+      <td>17</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11.22</td>
+      <td>111</td>
+      <td>48.0</td>
+      <td>16</td>
+      <td>260</td>
+      <td>83</td>
+      <td>Good</td>
+      <td>65</td>
+      <td>10</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10.06</td>
+      <td>113</td>
+      <td>35.0</td>
+      <td>10</td>
+      <td>269</td>
+      <td>80</td>
+      <td>Medium</td>
+      <td>59</td>
+      <td>12</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7.40</td>
+      <td>117</td>
+      <td>100.0</td>
+      <td>4</td>
+      <td>466</td>
+      <td>97</td>
+      <td>Medium</td>
+      <td>55</td>
+      <td>14</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Very High</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.15</td>
+      <td>141</td>
+      <td>64.0</td>
+      <td>3</td>
+      <td>340</td>
+      <td>128</td>
+      <td>Bad</td>
+      <td>38</td>
+      <td>13</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+def validate_data(df):
+    conditions = {
+        "Sales >= 0": df["Sales"] >= 0,
+        "Age > 18": df["Age"] > 18,
+        "Age < 120": df["Age"] < 120,
+        "ShelveLoc in ['Good', 'Bad', 'Medium']": df["ShelveLoc"].isin(['Good', 'Bad', 'Medium']),
+        "Urban in ['Yes', 'No']": df["Urban"].isna() | df["Urban"].isin(['Yes', 'No']),
+        "US in ['Yes', 'No']": df["US"].isin(['Yes', 'No']),
+        "Education > 0": df["Education"] > 0,
+        "Education < 30": df["Education"] < 30,
+    }
+    return conditions
+
+# apply rule check to original data
+validation_results = validate_data(carseats)
+```
+
+
+```python
+def fix_negative_sales(data):
+    condition = (~data['Sales'].isna()) & (data['Sales'] < 0)
+    data.loc[condition, 'Sales'] = np.nan
+    return data
+
+carseats_cleaned = fix_negative_sales(carseats)
+```
+
+
+```python
+# re-validate cleaned data
+rule_checks = validate_data(carseats_cleaned)
+failed_checks = {name: ~result for name, result in rule_checks.items()}
+error_flags = pd.DataFrame(failed_checks)
+
+# nullify invalid entries
+for rule_name in error_flags.columns:
+    column_to_update = rule_name.split()[0]
+    carseats_cleaned.loc[error_flags[rule_name], column_to_update] = np.nan
+```
+
+
+```python
+# final summary of violations
+print(carseats['Urban'].unique())
+
+violation_summary = {rule: mask.sum() for rule, mask in failed_checks.items()}
+print(violation_summary)
+```
+
+    ['Yes' 'No' nan]
+    {'Sales >= 0': np.int64(0), 'Age > 18': np.int64(0), 'Age < 120': np.int64(0), "ShelveLoc in ['Good', 'Bad', 'Medium']": np.int64(0), "Urban in ['Yes', 'No']": np.int64(0), "US in ['Yes', 'No']": np.int64(0), 'Education > 0': np.int64(0), 'Education < 30': np.int64(0)}
+    
