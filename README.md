@@ -10,6 +10,6 @@ Mateusz Hann & Oskar Kłos
 
 [Task 4](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%204.md)
 
-[Task 5](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%205.md)
+[Task 5](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise5.md)
 
-[Task 6](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%206.md)
+[Task 6](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise6.md)
