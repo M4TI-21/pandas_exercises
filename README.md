@@ -3,8 +3,13 @@ Mateusz Hann & Oskar Kłos
 
 # Pandas exercises
 [Task 1](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%201.md)
+
 [Task 2](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%202.md)
+
 [Task 3](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%203.md)
 
-
 [Task 4](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%204.md)
+
+[Task 5](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise5.md)
+
+[Task 6](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise6.md)
