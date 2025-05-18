@@ -1,5 +1,5 @@
-Mateusz Hann & Oskar Kłos
-203308         203708
+# Mateusz Hann & Oskar Kłos         <------
+# 203308         203708
 
 # Pandas exercises
 [Task 1](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise%201.md)
@@ -13,3 +13,6 @@ Mateusz Hann & Oskar Kłos
 [Task 5](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise5.md)
 
 [Task 6](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise6.md)
+
+[Task 8](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise8.ipynb)
+# Sorry I have some issue and cannot make it a markdown file
