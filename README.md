@@ -14,5 +14,6 @@
 
 [Task 6](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise6.md)
 
-[Task 8](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise8.ipynb)
-# Sorry I have some issue and cannot make it a markdown file
+[Task 8](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise8.md)
+
+[Task 9](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise9.md)
