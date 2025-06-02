@@ -17,3 +17,5 @@
 [Task 8](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise8.md)
 
 [Task 9](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise9.md)
+
+[Task 10](https://github.com/M4TI-21/pandas_exercises/blob/main/Exercise10.md)
